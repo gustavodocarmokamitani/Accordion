@@ -1,0 +1,165 @@
+:root {
+    --dark: #1d1e35;
+    --orange: #f47c57;
+    --violet: #af67e9;
+    --blue: #6663E8;
+    --grayish-blue: #4a4b5e;
+    --dark-grayish-blue: #787887;
+    --light-grayish-blue: #e7e7e9;
+}
+
+
+/* Google Fonts */
+
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Backgrounds */
+
+.accordion-area {
+    height: 100vh;
+    background: rgb(175, 103, 233);
+    background: linear-gradient(197deg, rgba(175, 103, 233, 1) 0%, rgba(102, 99, 232, 1) 100%);
+    position: relative;
+}
+
+.accordion-area .accordion-bg {
+    width: 70vw;
+    height: auto;
+    min-height: 600px;
+    background-color: whitesmoke;
+    box-shadow: 21px 17px 31px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    position: relative;
+}
+
+.accordion-area .accordion-bg .contentBox .label {
+    margin-top: 25px;
+    position: relative;
+}
+
+.accordion-area .accordion-bg .container-accordion {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.accordion-area .image-1 {
+    position: relative;
+    top: 0;
+    left: 75px;
+    width: 150px;
+    float: left;
+    z-index: 2;
+    animation: box 5s infinite;
+}
+
+@keyframes box {
+    0% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+.accordion-area .accordion-bg .image-col .image-one img {
+    position: relative;
+    right: 80px;
+    top: 50px;
+}
+
+.accordion-area .accordion-bg .image-col .image-two img {
+    position: absolute;
+    left: -80px;
+    top: 60px;
+}
+
+
+/* Fonts */
+
+.accordion-area .accordion-bg .container-accordion .accordion-faq {
+    font-size: 2.5rem;
+}
+
+.accordion-area .accordion-bg .contentBox .label .accordion-title {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.accordion-area .accordion-bg .contentBox .label span .accordion-title:hover {
+    color: var(--orange);
+}
+
+.accordion-area .accordion-bg .contentBox .label .accordion-txt {
+    font-size: 1rem;
+    color: var(--dark-grayish-blue);
+}
+
+
+/* Accordion */
+
+.accordion-area .accordion-bg .contentBox .label span {
+    cursor: pointer;
+}
+
+.accordion-area .accordion-bg .contentBox .content {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.accordion-area .accordion-bg .contentBox .content p {
+    /* margin: 0 auto; */
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s ease;
+    margin-bottom: 0 !important;
+}
+
+.accordion-area .accordion-bg .contentBox.active .content p {
+    width: 80%;
+    height: 90px;
+    padding: 15px 0;
+}
+
+.accordion-area .accordion-bg .contentBox.active .label span .accordion-title {
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.accordion-area .accordion-bg .contentBox.active .label span .accordion-image {
+    transition: all .5s ease;
+    transform: rotate(180deg);
+}
+
+.accordion-area .accordion-bg .contentBox .label span .accordion-image {
+    width: 15px;
+}
+
+
+/*  media */
+
+@media only screen and (max-width: 1200px) {
+    .accordion-area .image-1 {
+        display: none;
+    }
+    .accordion-area .accordion-bg {
+        top: 25px;
+    }
+    .accordion-area .accordion-bg .image-col .image-one img {
+        width: 350px;
+    }
+    .accordion-area .accordion-bg .image-col .image-two img {
+        width: 350px;
+    }
+    .accordion-area .accordion-bg .image-col {}
+}
