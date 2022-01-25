@@ -1,5 +1,12 @@
-https://eager-goldwasser-b7061f.netlify.app/
 
+## Welcome! 👋
+--------------------------------------------------------------------------
+
+### `Access the Project:`
+
+## https://eager-goldwasser-b7061f.netlify.app/
+
+--------------------------------------------------------------------------
 
 # Frontend Mentor - FAQ accordion card
 
